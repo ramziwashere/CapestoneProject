@@ -99,7 +99,7 @@ $database = getenv('capdb');
 #$username   = 'USERNAME';
 #$password   = 'PASSWORD';
 #$db_name    = 'DBNAME';
-#$sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
+$sslcert    = 'ssl/DigiCertGlobalRootG2.crt.pem';
 
 # Test for local file creation
 #$sslcertstring   = getenv('DB_SSLCERT');
