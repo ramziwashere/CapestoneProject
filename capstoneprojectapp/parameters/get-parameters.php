@@ -46,53 +46,55 @@ require __DIR__ . '/vendor/autoload.php';
 // *******************PARAMETER SECTION *************************** //
 
 
-// STEP 1 : STUDENT TO UPDATE - KEVAULT ENDPOINT URL
-$secret = new AzKeyVault\Secret('https://capstoneproject-kv.vault.azure.net/');
-$secrets = $secret->getSecrets();
+// // STEP 1 : STUDENT TO UPDATE - KEVAULT ENDPOINT URL
+// $secret = new AzKeyVault\Secret('https://capstoneproject-kv.vault.azure.net/');
+// $secrets = $secret->getSecrets();
 
-// STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
-$host  = $secret->getSecret('kv-db1-host');
-$username  = $secret->getSecret('kv-db1-username');
-$password = $secret->getSecret('kv-db1-password');
-$db_name  = $secret->getSecret('kv-db1-dbname');
+// // STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
+// $host  = $secret->getSecret('kv-db1-host');
+// $username  = $secret->getSecret('kv-db1-username');
+// $password = $secret->getSecret('kv-db1-password');
+// $db_name  = $secret->getSecret('kv-db1-dbname');
 
-// STEP 3: STUDENT TO DOWNLOAD AND UPLOAD PEM  CERT FOR THE DATABASE CREATED  ( From Azure Portal ) to the SSL folder with the same name as below
-$sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
-
-
-
-
-// *******************PARAMETER SECTION *************************** //
-// ************ STUDENTS UPDATE ABOVE PARAMETER SECTION *********** //
+// // STEP 3: STUDENT TO DOWNLOAD AND UPLOAD PEM  CERT FOR THE DATABASE CREATED  ( From Azure Portal ) to the SSL folder with the same name as below
+// $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
 
 
 
-# ++++++++++
-# SECTION 2
-# ++++++++++
+
+// // *******************PARAMETER SECTION *************************** //
+// // ************ STUDENTS UPDATE ABOVE PARAMETER SECTION *********** //
+
+
+
+// # ++++++++++
+// # SECTION 2
+// # ++++++++++
     
-/**
- * #################################################################################################################################
- * BELOW CONFIGURATION ( SECTION 2 ) IS REQUIRED IF STUDENT RUN  PHP APP  ON AZURE WEB APP ( APP SERVICE PLAN ) Instead of as a VM
- * #################################################################################################################################
- * 
- */
+// /**
+//  * #################################################################################################################################
+//  * BELOW CONFIGURATION ( SECTION 2 ) IS REQUIRED IF STUDENT RUN  PHP APP  ON AZURE WEB APP ( APP SERVICE PLAN ) Instead of as a VM
+//  * #################################################################################################################################
+//  * 
+//  */
 
- /* <**********  DELETE THIS LINE IF YOU WANT TO ENABLE THIS SECTION    ****** 
-
-# <?php
+// <?php
 
 // Configuration for database connection
 
 # REMOTE DECLARATION
-$host       = getenv('DB_HOST');
-$username   = getenv('DB_USERNAME');
-$password   = getenv('DB_PASSWORD');
-$db_name     = getenv('DB_DATABASE');
-$sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
+// $host       = getenv('DB_HOST');
+// $username   = getenv('DB_USERNAME');
+// $password   = getenv('DB_PASSWORD');
+// $db_name     = getenv('DB_DATABASE');
+// $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
 #$sslcert   = getenv('DB_SSLCERT');
 
 # LOCAL DECLARATION
+$host = getenv('Mwowdb.mysql.database.azure.com'); 
+$user = getenv('ramzi'); 
+$password = getenv('1234Password'); 
+$database = getenv('capdb');
 #$host       = 'SQLdbENDPOINT';
 #$username   = 'USERNAME';
 #$password   = 'PASSWORD';
@@ -106,5 +108,4 @@ $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
 #file_put_contents('testcertsb.pem', $testpemcontent);
 #$sslcert    = "testcertsb.pem";
 ?>
-
-**********  DELETE THIS LINE IF YOU WANT TO ENABLE THIS SECTION    ******   */   
+ 
