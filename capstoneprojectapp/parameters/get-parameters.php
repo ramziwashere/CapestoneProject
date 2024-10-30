@@ -95,11 +95,12 @@ $host = getenv('Mwowdb.mysql.database.azure.com');
 $user = getenv('ramzi'); 
 $password = getenv('1234Password'); 
 $database = getenv('capdb');
+$conn = mysqli_connect($host, $user, $password, $database);
 #$host       = 'SQLdbENDPOINT';
 #$username   = 'USERNAME';
 #$password   = 'PASSWORD';
 #$db_name    = 'DBNAME';
-$sslcert    = 'ssl/DigiCertGlobalRootG2.crt.pem';
+#$sslcert    = 'ssl/DigiCertGlobalRootG2.crt.pem';
 
 # Test for local file creation
 #$sslcertstring   = getenv('DB_SSLCERT');
