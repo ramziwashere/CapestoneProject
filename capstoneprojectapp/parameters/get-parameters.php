@@ -107,4 +107,3 @@ $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
 #$sslcert    = "testcertsb.pem";
 ?>
 
-**********  DELETE THIS LINE IF YOU WANT TO ENABLE THIS SECTION    ******   */   
