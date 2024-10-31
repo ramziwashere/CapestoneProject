@@ -92,9 +92,9 @@ require __DIR__ . '/vendor/autoload.php';
 
 # LOCAL DECLARATION
 $host = getenv('Mwowdb.mysql.database.azure.com'); 
-$user = getenv('ramzi'); 
+$username = getenv('ramzi'); 
 $password = getenv('1234Password'); 
-$database = getenv('capdb');
+$db_name = getenv('capdb');
 #$conn = mysqli_connect($host, $user, $password, $database);
 #$host       = 'SQLdbENDPOINT';
 #$username   = 'USERNAME';
