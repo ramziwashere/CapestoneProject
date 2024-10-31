@@ -46,15 +46,15 @@ require __DIR__ . '/vendor/autoload.php';
 // *******************PARAMETER SECTION *************************** //
 
 
-// // STEP 1 : STUDENT TO UPDATE - KEVAULT ENDPOINT URL
-$secret = new AzKeyVault\Secret('https://mykeywowapp.vault.azure.net/');
-$secrets = $secret->getSecrets();
+// // // STEP 1 : STUDENT TO UPDATE - KEVAULT ENDPOINT URL
+// $secret = new AzKeyVault\Secret('https://mykeywowapp.vault.azure.net/');
+// $secrets = $secret->getSecrets();
 
-// // STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
-$host  = $secret->getSecret('host');
-$username  = $secret->getSecret('username');
-$password = $secret->getSecret('password');
-$db_name  = $secret->getSecret('dbname');
+// // // STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
+// $host  = $secret->getSecret('host');
+// $username  = $secret->getSecret('username');
+// $password = $secret->getSecret('password');
+// $db_name  = $secret->getSecret('dbname');
 
 // // STEP 3: STUDENT TO DOWNLOAD AND UPLOAD PEM  CERT FOR THE DATABASE CREATED  ( From Azure Portal ) to the SSL folder with the same name as below
 // $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
@@ -83,10 +83,10 @@ $db_name  = $secret->getSecret('dbname');
 // Configuration for database connection
 
 # REMOTE DECLARATION
-// $host       = getenv('DB_HOST');
-// $username   = getenv('DB_USERNAME');
-// $password   = getenv('DB_PASSWORD');
-// $db_name     = getenv('DB_DATABASE');
+$host       = getenv('DB_HOST');
+$username   = getenv('DB_USERNAME');
+$password   = getenv('DB_PASSWORD');
+$db_name     = getenv('DB_DATABASE');
 // $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
 #$sslcert   = getenv('DB_SSLCERT');
 
