@@ -85,12 +85,11 @@ require __DIR__ . '/vendor/autoload.php';
 // Configuration for database connection
 
 # REMOTE DECLARATION
-$host       = getenv('DB_HOST');
-$username   = getenv('DB_USERNAME');
-$password   = getenv('DB_PASSWORD');
-$db_name     = getenv('DB_DATABASE');
-// $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
-// $sslcert   = getenv('DB_SSLCERT');
+$host = getenv('DB_HOST');
+$username = getenv('DB_USERNAME');
+$password = getenv('DB_PASSWORD');
+$db_name = getenv('DB_DATABASE');
+
 
 # LOCAL DECLARATION
 // # LOCAL DECLARATION
