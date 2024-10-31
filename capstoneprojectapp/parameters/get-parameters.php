@@ -47,14 +47,14 @@ require __DIR__ . '/vendor/autoload.php';
 
 
 // // STEP 1 : STUDENT TO UPDATE - KEVAULT ENDPOINT URL
-// $secret = new AzKeyVault\Secret('https://capstoneproject-kv.vault.azure.net/');
-// $secrets = $secret->getSecrets();
+$secret = new AzKeyVault\Secret('https://mykeywowapp.vault.azure.net/');
+$secrets = $secret->getSecrets();
 
 // // STEP 2: STUDENT TO MAKE SURE - PARAMETER NAME BELOW MATCHES WITH THE PARAMETER NAME PROVIDED IN KEYVAULT SETTINGS PAGE IN AZURE PORTAL
-// $host  = $secret->getSecret('kv-db1-host');
-// $username  = $secret->getSecret('kv-db1-username');
-// $password = $secret->getSecret('kv-db1-password');
-// $db_name  = $secret->getSecret('kv-db1-dbname');
+$host  = $secret->getSecret('host');
+$username  = $secret->getSecret('username');
+$password = $secret->getSecret('password');
+$db_name  = $secret->getSecret('dbname');
 
 // // STEP 3: STUDENT TO DOWNLOAD AND UPLOAD PEM  CERT FOR THE DATABASE CREATED  ( From Azure Portal ) to the SSL folder with the same name as below
 // $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
@@ -90,11 +90,11 @@ require __DIR__ . '/vendor/autoload.php';
 // $sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
 #$sslcert   = getenv('DB_SSLCERT');
 
-# LOCAL DECLARATION
-$host = 'wowdb.mysql.database.azure.com'; 
-$username = 'ramzi'; 
-$password = '1234Password'; 
-$db_name = 'capdb';
+// # LOCAL DECLARATION
+// $host = 'wowdb.mysql.database.azure.com'; 
+// $username = 'ramzi'; 
+// $password = '1234Password'; 
+// $db_name = 'capdb';
 #$conn = mysqli_connect($host, $user, $password, $database);
 #$host       = 'SQLdbENDPOINT';
 #$username   = 'USERNAME';
