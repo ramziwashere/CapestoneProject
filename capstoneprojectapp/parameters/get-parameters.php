@@ -91,10 +91,10 @@ require __DIR__ . '/vendor/autoload.php';
 #$sslcert   = getenv('DB_SSLCERT');
 
 # LOCAL DECLARATION
-$host = getenv('wowdb.mysql.database.azure.com'); 
-$username = getenv('ramzi'); 
-$password = getenv('1234Password'); 
-$db_name = getenv('capdb');
+#$host = getenv('wowdb.mysql.database.azure.com'); 
+#$username = getenv('ramzi'); 
+#$password = getenv('1234Password'); 
+#$db_name = getenv('capdb');
 #$conn = mysqli_connect($host, $user, $password, $database);
 #$host       = 'SQLdbENDPOINT';
 #$username   = 'USERNAME';
